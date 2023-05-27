@@ -26,7 +26,7 @@ class NotesParser:
         self.data_dict["quote"].append(entry[3])
 
     def parse_notes(self, file):
-        dst_path = file.parent / "parsed_notes.csv"
+        dst_path = file.parent / f"parsed_{file.name}.csv"
         with open(file, "r", encoding="utf-8") as f:
             lines = f.readlines()
             try:
